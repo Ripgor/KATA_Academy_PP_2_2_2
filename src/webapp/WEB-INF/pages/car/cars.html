@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:>
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <style>
+        table th, table td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <!--Колонки-->
+    <tr>
+        <th> Id </th>
+        <th> Model </th>
+        <th> Mileage </th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--Заполнение колонок-->
+    <tr th:each="car : ${cars}">
+        <td><span th:text="${car.id}"> Id </span></td>
+        <td><span th:text="${car.model}"> Model </span></td>
+        <td><span th:text="${car.mileage}"> Mileage </span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
